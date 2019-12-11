@@ -16,15 +16,20 @@
 
 // The given address is a valid IPv4 address.
 
-const defangIPaddr = function(address) {
-  let result = '';
+//Declare a default parameter value inside the given function declaration. (ES2015 feature)
+const defangIPaddr = function(address, result = '') {
+  //Loop through the address argument value
   for (let i = 0; i < address.length; i++){
+    //if the address at index of 'i' is '.'
       if (address[i] === '.'){
+        //concat '[.]' to the result
           result += '[.]';
       } else {
+        //otherwise concat the value of address at index 'i' to the result.
           result += address[i];
       }
   }
+  //return the result after iterating through the entire address string value.
   return result;
 };
 
