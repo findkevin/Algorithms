@@ -32,3 +32,34 @@ Constraints:
 s[i] = 'L' or 'R'
 
 */
+
+var balancedStringSplit = function(s) {
+  //Create a counter variable to keep track of each 'L' and 'R'.
+  let counter = 0;
+  //Create a result variable to keep count of the balanced sets.
+  let result = 0;
+
+  //Use a for loop to iterate through the given string.
+  for (let i = 0; i < s.length; i++){
+      //Check the string at the index of 'i' to see if it has the value of 'L'.
+      //If it is true, increment our counter variable by 1.
+      if (s[i] === 'L'){
+          counter++;
+      }
+      //If it does not evaluate to 'L', it must be 'R'.
+      //Therefore, we decrement our counter variable by 1.
+      else {
+          counter--;
+      }
+      //Check if our counter variable evaluates to 0.
+      //If this is true we have a balanced set of 'L' and 'R'.
+      //Increment our result by 1.
+      if (counter === 0){
+          result++;
+      }
+  }
+  //Return our result when the for loop has iterated throughtout the entire given parameter string.
+  return result;
+};
+
+// balancedStringSplit('RLRRLLRLRL') //Output: 4
