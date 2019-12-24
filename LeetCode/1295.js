@@ -30,13 +30,19 @@ Constraints:
 */
 
 var findNumbers = function(nums) {
+  //Create a counter variable to keep count of the amount of integers within the nums array with an even number of digits.
   let counter = 0;
+  //Loop through the nums array to check each integer.
   for (let i = 0; i < nums.length; i++) {
+    //if the integer at the current index has a length of 0...
     if (nums[i].toString().length % 2 === 0) {
+      //...add one to the counter variable.
       counter++;
     }
   }
+  //Return the value of counter after checking every integer inside the nums array.
   return counter;
 };
 
 console.log(findNumbers([12, 345, 2, 6, 7896])); //Output: 2
+
