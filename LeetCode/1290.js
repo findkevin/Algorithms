@@ -32,3 +32,13 @@ Number of nodes will not exceed 30.
 Each node's value is either 0 or 1.
 */
 
+var getDecimalValue = function(head, result = 0) {
+  while (head) {
+      result = result * 2 + head.val
+      head = head.next
+  }
+  return result
+};
+
+// console.log(getDecimalValue([1,0,1])) //Output: 5
+// console.log(getDecimalValue([1,0,0,1,0,0,1,1,1,0,0,0,0,0,0])) //Output: 18880
