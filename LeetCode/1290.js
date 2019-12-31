@@ -32,11 +32,16 @@ Number of nodes will not exceed 30.
 Each node's value is either 0 or 1.
 */
 
+//Set a default parameter called result
 var getDecimalValue = function(head, result = 0) {
+  //While there is a head node...
   while (head) {
+      //double the result value and sum up the value with the head node.
       result = result * 2 + head.val
+      //Set the head node pointer to the next node.
       head = head.next
   }
+  //return the result
   return result
 };
 
