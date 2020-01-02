@@ -41,7 +41,7 @@ var getDecimalValue = function(head, result = 0) {
       //Set the head node pointer to the next node.
       head = head.next
   }
-  //return the result
+  //return the result.
   return result
 };
 
