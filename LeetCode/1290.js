@@ -50,4 +50,19 @@ var getDecimalValue = function(head, result = 0) {
 
 /*
 Question: How did you come up with this method to covert binary to decimal value?
+
+Explanation: This is called the Doubling Method.
+
+The first thing we need to do is write down the binary number that is given to us.
+
+Starting from left to right, we will double the previous total and add the current value.
+The previous total is set to 0 because we have not started yet. We will double the previous total, 0, and add the current value, 1.
+
+Next, double the current total and add the next leftmost digit. Our current total is now 1 and the new current value is 0. Double 1 and add 0.
+
+Repeat the previous steps until we run out of digits.
+Double the current total, 2, and add the new current value, 1. We have run out of digits and our current total is 5.
+
+Binary 101
+Decimal 5
 */
