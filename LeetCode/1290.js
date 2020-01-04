@@ -47,3 +47,7 @@ var getDecimalValue = function(head, result = 0) {
 
 // console.log(getDecimalValue([1,0,1])) //Output: 5
 // console.log(getDecimalValue([1,0,0,1,0,0,1,1,1,0,0,0,0,0,0])) //Output: 18880
+
+/*
+Question: How did you come up with this method to covert binary to decimal value?
+*/
