@@ -3,19 +3,33 @@
 // Write a function that takes in a sorted array of integers as well as a target integer. The function should use the Binary Search algorithm to find if the target number is contained in the array and should return its index if it is, other -1.
 
 //Your solution below:
+//Declare a function binarySearch that takes in an array, target, left and right pointers as parameters.
+//the left pointer starts at the beginning of the array at index 0.
+//The right pointer starts at the end of the array at index array.length - 1.
 function binarySearch(array, target, leftPointer = 0, rightPointer = array.length - 1) {
-  while (leftPointer <= rightPointer){
-    const midPoint = Math.floor((leftPointer + rightPointer) / 2);
-    if (target === array[midPoint]) {
-      return midPoint;
-    } else if (target < array[midPoint]) {
-      rightPointer = midPoint - 1;
-    } else {
-      leftPointer = midPoint + 1;
+  //While the left pointer is less than the right pointer...
+    while (leftPointer <= rightPointer){
+      //create a variable that determines the mid point of the array.
+      const midPoint = Math.floor((leftPointer + rightPointer) / 2);
+      //check if the middle number in the array matches the target number.
+      if (target === array[midPoint]) {
+        //if it does return the index of the midpoint index.
+        return midPoint;
+      }
+      //check if that middle number in the array is greater than the target number.
+      else if (target < array[midPoint]) {
+        //if it is, reassign the right pointer to the index one less than the mid point.
+        rightPointer = midPoint - 1;
+      }
+      //otherwise, the middle number in in the array is less than the target number.
+      else {
+        //reassign the left pointer to the index one greater than the midpoint.
+        leftPointer = midPoint + 1;
+      }
     }
+    //if the leftpointer is greater than the right pointer, none of the integers in the array matches our target value. therefore we return the value -1.
+    return -1;
   }
-  return -1;
-}
 
 
 //AlgoExperts Solution #2 (Iterative)
