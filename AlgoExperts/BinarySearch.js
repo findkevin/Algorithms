@@ -2,6 +2,8 @@
 
 // Write a function that takes in a sorted array of integers as well as a target integer. The function should use the Binary Search algorithm to find if the target number is contained in the array and should return its index if it is, other -1.
 
+//------------------------------------------------------------------------------------------------------------------------------------
+
 //Your solution below:
 //Declare a function binarySearch that takes in an array, target, left and right pointers as parameters.
 //the left pointer starts at the beginning of the array at index 0.
@@ -31,9 +33,33 @@ function binarySearch(array, target, leftPointer = 0, rightPointer = array.lengt
     return -1;
   }
 
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//AlgoExperts Solution #1 (Recursive)
+//O(log(n)) Time | O(log(n)) Space
+
+// function binarySearch(array, target){
+//   return binarySearchHelper(array, target, 0, array.length - 1);
+// }
+
+// function binarySearchHelper(array, target, left, right){
+//   if (left > right) return -1;
+//   const middle = Math.floor((left + right) / 2);
+//   const potentialMatch = array[middle];
+//   if (target === potentialMatch){
+//     return middle;
+//   } else if (target < potentialMatch){
+//     return binarySearchHelper(array, target, left, middle - 1)
+//   } else {
+//     return binarySearchHelper(array, target, middle + 1, right)
+//   }
+// }
+
+//------------------------------------------------------------------------------------------------------------------------------------
 
 //AlgoExperts Solution #2 (Iterative)
 //O(log(n)) Time | O(1) Space
+
 // function binarySearch(array, target) {
 // 	return bSHelper(array, target, leftPointer = 0, rightPointer = array.length - 1)
 // }
