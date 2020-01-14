@@ -4,6 +4,13 @@
 
 function findClosestValueInBst(tree, target) {
   // Write your code here.
+  return findClosestValueInBstHelper(tree, target, Infinity);
+}
+
+function findClosestValueInBstHelper(tree, target, closest){
+  if (tree === null){
+    return closest;
+  }
 }
 
 // findClosestValueInBst(tree, 100); //Output: 100
